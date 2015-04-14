@@ -16,20 +16,48 @@ Ext.Loader.setPath({
 
 - Add the following to your SASS/CSS file
 ```
- .ripple-effect {
-     position: absolute;
-     top: 0;
-     left: 0;
-     border-radius: 50%;
-     box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.10);
-     width: 30px;
-     height: 30px;
-     background: rgba(255, 255, 255, 0.35);
-     animation: ripple 1s;
-     -webkit-animation: ripple 1s;
-     animation-fill-mode: forwards;
-     -webkit-animation-fill-mode: forwards;
- }
+.ripple-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.10);
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.35);
+    animation: ripple 1s;
+    -webkit-animation: ripple 1s;
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes ripple {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    100% {
+        -webkit-transform: scale(75);
+        transform: scale(75);
+        opacity: 0;
+    }
+}
+
+@keyframes ripple {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    100% {
+        -webkit-transform: scale(75);
+        transform: scale(1);
+        opacity: 0;
+    }
+}
 ```
 - Don't forget to recompile your SASS if it doesn't do it automagically.
 
