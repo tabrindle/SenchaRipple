@@ -2,6 +2,8 @@
 
 This is a work in progress, and might not be the best way to do this. However, it is reasonably performant, and has been in production in the Shop.com App for 6 months without issue. 
 
+[Demo Sencha Fiddle](https://fiddle.sencha.com/#fiddle/l84)
+
 ##Installation:
 
 - Copy Ripple.js contents into app/ux/Ripple.js
